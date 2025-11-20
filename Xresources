@@ -1,0 +1,97 @@
+xterm.termName: xterm-256color
+
+! ## Set xterm window size ##
+xterm*VT100.geometry: 70x26
+
+! ## Set font and fontsize ##
+xterm*faceName: DejaVu Sans Mono Regular
+xterm*faceSize: 14
+
+xterm*faceName: JetBrainsMono Nerd Font
+xterm*faceSize: 14
+
+! VT Font Menu: Unreadable
+xterm*faceSize1: 8
+! VT Font Menu: Tiny
+xterm*faceSize2: 10
+! VT Font Menu: Small
+xterm*faceSize3: 12
+! VT Font Menu: Medium
+xterm*faceSize4: 16
+! VT Font Menu: Large
+xterm*faceSize5: 22
+! VT Font Menu: Huge
+xterm*faceSize6: 24
+
+! ## Scrollbar ##
+xterm*vt100.scrollBar: false
+
+! Do not scroll when there is new input
+xterm*scrollTtyOutput: false
+
+! Scrolling by using Shift-PageUp / Shift-PageDown or mousewheel by default ##
+! Lines of output you can scroll back over
+xterm*saveLines: 15000
+
+! Enable copy/paste hotkeyes (mouse highlight = copy ,  shift+Insert = paste)
+xterm*selectToClipboard: true
+
+! ## Select text ##
+xterm*highlightSelection: true
+! Remove trailing spaces
+xterm*trimSelection: true
+
+! ## Keybindings ##
+xterm*vt100.translations: #override \n\
+  Ctrl <Key>-: smaller-vt-font() \n\
+  Ctrl <Key>+: larger-vt-font() \n\
+  Ctrl <Key>0: set-vt-font(d) \n\
+  Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
+  Ctrl Shift <Key>V: insert-selection(CLIPBOARD)
+
+! ~~~~~~~~~~~~~~~~~~
+! ## Color Themes ## 
+! ~~~~~~~~~~~~~~~~~~
+!
+! based on snazzy color theme
+! https://github.com/olstenlarck/urxvt-xterm-snazzy/blob/7c34009a19ade65271e26ef065c678b0fa2abd0d/.Xdefaults
+!
+xterm*title: XTerminal
+xterm*background: #444444
+xterm*foreground: #ffffff
+
+! original #86a2b0
+xterm*colorUL: #eff0eb
+xterm*underlineColor: #eff0eb
+
+! ! black
+xterm*color0  : #2E3436
+xterm*color8  : #686868
+!
+! ! red
+xterm*color1  : #ff5c57
+xterm*color9  : #ff5c57
+!
+! ! green
+xterm*color2  : #5af78e
+xterm*color10 : #5af78e
+!
+! ! yellow
+xterm*color3  : #f3f99d
+xterm*color11 : #f3f99d
+!
+! ! blue
+xterm*color4  : #57c7ff
+xterm*color12 : #57c7ff
+!
+! ! magenta
+xterm*color5  : #ff6ac1
+xterm*color13 : #ff6ac1
+!
+! ! cyan
+xterm*color6  : #9aedfe
+xterm*color14 : #9aedfe
+!
+! ! white
+xterm*color7  : #f1f1f0
+xterm*color15 : #eff0eb
